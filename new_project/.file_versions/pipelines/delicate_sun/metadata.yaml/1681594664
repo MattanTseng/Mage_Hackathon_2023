@@ -1,0 +1,42 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - most_frequent_values_for_ecommer_user_data_load
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ecommer-user-data-load
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: ecommer_user_data_load
+data_integration: null
+description: null
+extensions: {}
+name: delicate sun
+type: python
+updated_at: '2023-04-15 21:37:43'
+uuid: delicate_sun
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    height: 3000
+    index: column_index
+    x: columns
+    y: rows
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: most frequent values for ecommer_user_data_load
+  status: updated
+  type: chart
+  upstream_blocks:
+  - ecommer_user_data_load
+  uuid: most_frequent_values_for_ecommer_user_data_load

@@ -1,0 +1,40 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - histogram_for_etl_demo_dataloader_01_1681594144055
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: etl_demo_dataloader_01
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: etl_demo_dataloader_01
+data_integration: null
+description: null
+extensions: {}
+name: snowy snow
+type: python
+updated_at: '2023-04-15 21:29:04'
+uuid: snowy_snow
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: histogram for etl_demo_dataloader_01 1681594144055
+  status: executed
+  type: chart
+  upstream_blocks:
+  - etl_demo_dataloader_01
+  uuid: histogram_for_etl_demo_dataloader_01_1681594144055

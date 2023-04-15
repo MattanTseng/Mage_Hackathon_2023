@@ -1,0 +1,37 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - ecommer_user_data_transf
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ecommer-user-data-load
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: ecommer_user_data_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ecommer_user_data_transf
+  status: failed
+  type: transformer
+  upstream_blocks:
+  - ecommer_user_data_load
+  uuid: ecommer_user_data_transf
+data_integration: null
+description: null
+extensions: {}
+name: delicate sun
+type: python
+updated_at: '2023-04-15 21:48:41'
+uuid: delicate_sun
+widgets: []
