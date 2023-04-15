@@ -16,6 +16,7 @@ def load_data(*args, **kwargs):
 
     userData = pd.read_csv("/home/src/default_repo/Mage_Hackathon_2023/Data/User_Data.csv")
     eCommerceData = pd.read_csv("/home/src/default_repo/Mage_Hackathon_2023/Data/ecom-user-churn-data.csv")
+    print(userData.columns.values)
 
     return {}
 

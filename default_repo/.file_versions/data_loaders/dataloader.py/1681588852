@@ -13,9 +13,8 @@ def load_data(*args, **kwargs):
     Returns:
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
     """
-
-    userData = pd.read_csv("/home/src/default_repo/Mage_Hackathon_2023/Data/User_Data.csv")
-    eCommerceData = pd.read_csv("/home/src/default_repo/Mage_Hackathon_2023/Data/ecom-user-churn-data.csv")
+    userData = pd.read_csv("~/home/src/default_repo/Mage_Hackathon_2023")
+    print("This is line 16")
 
     return {}
 
