@@ -13,11 +13,25 @@ blocks:
   type: data_loader
   upstream_blocks: []
   uuid: userdataloader
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: augmentusers
+  status: updated
+  type: transformer
+  upstream_blocks:
+  - matchlength
+  uuid: augmentusers
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
-  - combine2dfs
+  - randomaugment
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -31,32 +45,17 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - randomaugment
+  - augmentusers
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
   name: matchlength
-  status: executed
+  status: failed
   type: transformer
   upstream_blocks:
   - userdataloader
   uuid: matchlength
-- all_upstream_blocks_executed: true
-  color: null
-  configuration: {}
-  downstream_blocks:
-  - combine2dfs
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: randomaugment
-  status: executed
-  type: transformer
-  upstream_blocks:
-  - matchlength
-  uuid: randomaugment
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
@@ -65,18 +64,17 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: combine2dfs
-  status: executed
+  name: randomaugment
+  status: updated
   type: transformer
   upstream_blocks:
-  - randomaugment
   - ecommercedataloader
-  uuid: combine2dfs
+  uuid: randomaugment
 data_integration: null
 description: null
 extensions: {}
 name: still mountain
 type: python
-updated_at: '2023-04-15 21:40:25'
+updated_at: '2023-04-15 21:12:17'
 uuid: still_mountain
 widgets: []
