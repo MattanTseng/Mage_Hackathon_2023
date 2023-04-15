@@ -1,0 +1,1 @@
+"{\"data\": [\"[__internal_test__]{\\\"message\\\": \\\"1/1 tests passed.\\\"}\", \"\"], \"error\": null, \"execution_state\": null, \"metadata\": null, \"msg_id\": \"81dc27a5-00b2ff0320399e03b49a8b7a_8_0\", \"msg_type\": \"stream\", \"type\": \"text/plain\", \"block_type\": \"data_loader\", \"pipeline_uuid\": null, \"uuid\": \"loaddataset\"}"

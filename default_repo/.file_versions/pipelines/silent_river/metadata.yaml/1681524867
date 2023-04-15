@@ -1,0 +1,41 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - bar_chart_for_loaddataset_1681524866332
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: LoadDataset
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: loaddataset
+data_integration: null
+description: null
+extensions: {}
+name: silent river
+type: python
+updated_at: '2023-04-15 02:14:26'
+uuid: silent_river
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: vertical
+    chart_type: bar chart
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: bar chart for loaddataset 1681524866332
+  status: executed
+  type: chart
+  upstream_blocks:
+  - loaddataset
+  uuid: bar_chart_for_loaddataset_1681524866332

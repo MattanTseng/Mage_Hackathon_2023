@@ -1,0 +1,102 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - bar_chart_for_loaddataset_1681524866332
+  - histogram_for_loaddataset_1681524893725
+  - summary_overview_for_loaddataset
+  - transformdata
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: LoadDataset
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: loaddataset
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: TransformData
+  status: updated
+  type: transformer
+  upstream_blocks:
+  - loaddataset
+  uuid: transformdata
+data_integration: null
+description: null
+extensions: {}
+name: silent river
+type: python
+updated_at: '2023-04-15 02:19:53'
+uuid: silent_river
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: vertical
+    chart_type: bar chart
+    group_by:
+    - user ID
+    metrics:
+    - aggregation: count_distinct
+      column: meal transaction ID
+    width_percentage: '1'
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: bar chart for loaddataset 1681524866332
+  status: executed
+  type: chart
+  upstream_blocks:
+  - loaddataset
+  uuid: bar_chart_for_loaddataset_1681524866332
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    group_by:
+    - rating
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: histogram for loaddataset 1681524893725
+  status: executed
+  type: chart
+  upstream_blocks:
+  - loaddataset
+  uuid: histogram_for_loaddataset_1681524893725
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    height: 3000
+    index: stats
+    x: headers
+    y: rows
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: summary overview for loaddataset
+  status: executed
+  type: chart
+  upstream_blocks:
+  - loaddataset
+  uuid: summary_overview_for_loaddataset
