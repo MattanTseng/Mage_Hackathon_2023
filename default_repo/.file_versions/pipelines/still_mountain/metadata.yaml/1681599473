@@ -108,7 +108,7 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - sessioninteractionsgraph
+  - xygraph
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -127,18 +127,18 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: sessioninteractionsgraph
+  name: xyGraph
   status: updated
   type: custom
   upstream_blocks:
   - sessioninteractions
-  uuid: sessioninteractionsgraph
+  uuid: xygraph
 data_integration: null
 description: null
 extensions: {}
 name: still mountain
 type: python
-updated_at: '2023-04-15 23:05:19'
+updated_at: '2023-04-15 22:57:53'
 uuid: still_mountain
 widgets:
 - all_upstream_blocks_executed: false

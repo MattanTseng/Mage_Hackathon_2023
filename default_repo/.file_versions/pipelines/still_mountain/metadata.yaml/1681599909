@@ -128,7 +128,7 @@ blocks:
   has_callback: false
   language: python
   name: sessioninteractionsgraph
-  status: updated
+  status: executed
   type: custom
   upstream_blocks:
   - sessioninteractions
@@ -138,7 +138,7 @@ description: null
 extensions: {}
 name: still mountain
 type: python
-updated_at: '2023-04-15 23:05:19'
+updated_at: '2023-04-15 23:05:06'
 uuid: still_mountain
 widgets:
 - all_upstream_blocks_executed: false
