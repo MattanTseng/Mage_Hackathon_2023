@@ -1,0 +1,6 @@
+columns = df_1.columns
+df_1.drop(columns=dataset.columns[0], axis=0, inplace=True)
+
+x = df_1.iloc[:, 0]
+y = df_1.iloc[:, 1]
+

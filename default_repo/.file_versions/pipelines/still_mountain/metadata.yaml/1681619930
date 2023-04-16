@@ -1,0 +1,175 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - matchlength
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: userDataLoader
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: userdataloader
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - combine2dfs
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: eCommerceDataLoader
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: ecommercedataloader
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - randomaugment
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: matchlength
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - userdataloader
+  uuid: matchlength
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - combine2dfs
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: randomaugment
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - matchlength
+  uuid: randomaugment
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - gendervisits
+  - purchasevisits
+  - sessioninteractions
+  - agevisits
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: combine2dfs
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - randomaugment
+  - ecommercedataloader
+  uuid: combine2dfs
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: gendervisits
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - combine2dfs
+  uuid: gendervisits
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: purchasevisits
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - combine2dfs
+  uuid: purchasevisits
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - sessioninteractionsgraph
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sessioninteractions
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - combine2dfs
+  uuid: sessioninteractions
+- all_upstream_blocks_executed: true
+  color: pink
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sessioninteractionsgraph
+  status: updated
+  type: custom
+  upstream_blocks:
+  - sessioninteractions
+  uuid: sessioninteractionsgraph
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - histogram_for_agevisits_1681619856290
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: agevisits
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - combine2dfs
+  uuid: agevisits
+data_integration: null
+description: null
+extensions: {}
+name: still mountain
+type: python
+updated_at: '2023-04-16 04:38:45'
+uuid: still_mountain
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: '14'
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: histogram for agevisits 1681619856290
+  status: executed
+  type: chart
+  upstream_blocks:
+  - agevisits
+  uuid: histogram_for_agevisits_1681619856290

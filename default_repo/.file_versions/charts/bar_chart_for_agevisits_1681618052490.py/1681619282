@@ -1,0 +1,10 @@
+columns = df_1.columns
+df_1.drop(columns=dataset.columns[0], axis=0, inplace=True)
+
+print(df_1.shape)
+
+# x = df_1[df_1.colums[0]]
+# y = df_1[df_1.colums[1]]
+
+x = df_1.iloc[:, 0].values.tolist()
+y = df_1.iloc[:, 1].values.tolist()
